@@ -1,0 +1,47 @@
+/* main  header of container */
+.container{
+    background-color: black;
+    color:white;
+    text-align:center;
+    padding : 10px;  
+    display:flex;
+ 
+}
+
+nav ul{
+    list-style: none;   /*to remove bulletin points*/
+    text-align:center;
+    justify-content: flex-end;
+}
+/* to display in horizontal to flex*/
+.containerLink{ 
+    display:flex;
+    margin:20px;
+    text-align:right;
+}
+/* to padding in Link Name  */
+span{
+    margin:20px;  
+    color:white;
+}
+/* hover text */
+span :hover{
+    color :yellow;
+    transform: scale(1.1);
+}
+/* to display logo in left */
+.logoimagecss{
+    justify-content: flex-start;
+
+}
+nav ul li{
+    justify-content:flex-end;
+}
+/* hove of link name */
+.containerLink a:hover {
+    color: #ff6347;         /* Change text color to Tomato on hover */
+    text-decoration: underline; /* Add underline on hover */
+    transform: scale(1.05);  /* Slightly enlarge the text on hover */
+  }
+
+
