@@ -4,13 +4,14 @@ import {BrowserRouter as Router, Route,Routes,Link,Navigate} from 'react-router-
 // import viteLogo from '/vite.svg'
 import Styles from './App.module.css';
 import Header from './Components/JSXFile/Header';
-import Home from './Components/Home';
+import Home from './Components/JSXFile/Home';
 import AboutUs from './Components/AboutUs';
 import Pages from './Components/Pages';
 import Rooms from './Components/Rooms';
 import Blog from './Components/Blog';
 import ContactUs from './Components/ContactUs';
 import LogoImage from  './Components/JSXFile/Logo';
+
 
 function App() {
   const [count, setCount] = useState(0)

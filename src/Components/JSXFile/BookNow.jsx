@@ -4,9 +4,9 @@ const BookNow =()=>{
     return(
         <>
         <div>
-            <p>Book Now Page</p>
+           <button>Book Now</button>
         </div>
         </>
     )
 };
-export default BookNow
+export default BookNow;

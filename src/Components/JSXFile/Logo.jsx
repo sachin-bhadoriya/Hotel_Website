@@ -1,12 +1,12 @@
 import React from 'react';
-import LogoImage from '../../images/logo.png';
+//import Prop_Types from 'prop-types';
 import Styles from '../CSSFile/Logo.module.css';
 
-const Logo =()=>{
+const Logo =({Image})=>{
     return (
         <>
         <div>
-            <img src={LogoImage} alt="src" />
+            <img src={Image} alt="Hotel Logo" />
         </div>
      
             

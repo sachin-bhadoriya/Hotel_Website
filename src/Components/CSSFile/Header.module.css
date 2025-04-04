@@ -31,8 +31,13 @@ span :hover{
 }
 /* to display logo in left */
 .logoimagecss{
+    margin-top:-11px;  
+   
     justify-content: flex-start;
 
+}
+span .logoimagecss {
+    margin-left:-37x;
 }
 nav ul li{
     justify-content:flex-end;
