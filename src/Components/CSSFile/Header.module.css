@@ -1,10 +1,13 @@
 /* main  header of container */
 .container{
+   
+    width:100%;   /*set the width of background header*/
     background-color: black;
     color:white;
     text-align:center;
-    padding : 10px;  
+    padding-bottom : 2px;  
     display:flex;
+    margin-bottom:10px;
  
 }
 
@@ -31,14 +34,11 @@ span :hover{
 }
 /* to display logo in left */
 .logoimagecss{
-    margin-top:-11px;  
-   
+    margin-top:-11px;   
     justify-content: flex-start;
 
 }
-span .logoimagecss {
-    margin-left:-37x;
-}
+
 nav ul li{
     justify-content:flex-end;
 }

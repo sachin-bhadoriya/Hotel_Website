@@ -5,12 +5,10 @@ import Styles from '../CSSFile/Logo.module.css';
 const Logo =({Image})=>{
     return (
         <>
-        <div>
+        <div className={Styles.LogoContainer}>
             <img src={Image} alt="Hotel Logo" />
         </div>
-     
-            
-        
+             
         </>
     );
 
