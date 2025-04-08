@@ -31,6 +31,10 @@ const Header=()=>{
                             <Link to ="/AboutUs"><span className={Styles.aboutus_css}>About Us</span></Link>
                         </li><li>
                             <Link to="/ContactUs"><span className={Styles.contactus_css}>Contact Us</span></Link>
+                        </li><li>
+                            <Link to="/SignUp"><span className={Styles.SignUp_css}>Sign Up</span></Link>
+                        </li><li>
+                            <Link to="/SignIn" className={Styles.SignIn_css}><span>Sign In</span></Link>
                         </li>
                     
                         {/* You can add more links here for other routes if needed */}

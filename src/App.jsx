@@ -11,6 +11,8 @@ import Rooms from './Components/Rooms';
 import Blog from './Components/Blog';
 import ContactUs from './Components/ContactUs';
 import LogoImage from  './Components/JSXFile/Logo';
+import SignUp from './Components/JSXFile/SignUP';
+import SignIn from './Components/JSXFile/SignIn';
 
 
 function App() {
@@ -22,13 +24,9 @@ function App() {
       <Router> 
         <div>
         
-        <div className={Styles.headerContainer}>
+        <div className={Styles.AppContainer}>
         <Header/>
-        </div>
-          
-        
-  
-      
+        </div>  
             <Routes>
                       <Route path="/Logo" element={<LogoImage/>}/>
                       <Route path="/Home" element={<Home />} />
@@ -37,6 +35,8 @@ function App() {
                       <Route path="/Rooms"  element={<Rooms/>}/>
                       <Route path="/AboutUs"  element={<AboutUs/>}/>
                       <Route path="/ContactUs" element={<ContactUs/>}/>
+                      <Route path="/SignUp" element={<SignUp/>}/>
+                      <Route path="/SignIn" element={<SignIn/>}/>
                       
                       {/* Add more routes here for other components if needed */}
                       <Route path="/" element={<Navigate to="/Home" />} />
