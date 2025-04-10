@@ -1,0 +1,23 @@
+/* footer section css */
+.backGround{
+    background-color: #384663;
+    color: #fff;
+}
+/* heading css of quick link and address bar */
+.Headings {
+    color: #9ea5dc;
+}
+#gMaps {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 30%;
+    position: relative;
+}
+#gMaps iframe {
+    border: 0;
+    height: 80%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}

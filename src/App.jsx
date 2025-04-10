@@ -13,7 +13,8 @@ import ContactUs from './Components/ContactUs';
 import LogoImage from  './Components/JSXFile/Logo';
 import SignUp from './Components/JSXFile/SignUP';
 import SignIn from './Components/JSXFile/SignIn';
-
+import Footer from './Components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -41,6 +42,9 @@ function App() {
                       {/* Add more routes here for other components if needed */}
                       <Route path="/" element={<Navigate to="/Home" />} />
             </Routes>  
+          <div>
+            <Footer />
+          </div>
         </div>
       </Router> 
     

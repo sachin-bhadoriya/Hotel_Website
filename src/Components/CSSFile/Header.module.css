@@ -30,7 +30,9 @@ span{
 /* hover text */
 span :hover{
     color :yellow;
-    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transform: scale(1.05);
 }
 /* to display logo in left */
 .logoimagecss{
