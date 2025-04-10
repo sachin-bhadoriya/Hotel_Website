@@ -17,7 +17,18 @@ import SignIn from './Components/JSXFile/SignIn';
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const [signUpData,setsignUpData] = useState({
+    username:"",
+    email:"",
+    contactnumber:""
+  });
+const getDataFromSignUp =(data)=>{
+  console.log("it is getDataFromSignUp");
+  setsignUpData(data);
+  console.log(signUpData.email);
+  console.log(signUpData.username);
+  console.log(signUpData.contactnumber);
+}
   return (
     <>
 
@@ -25,7 +36,7 @@ function App() {
         <div>
         
         <div className={Styles.AppContainer}>
-        <Header/>
+        <Header onSignUp={signUpData}/>
         </div>  
             <Routes>
                       <Route path="/Logo" element={<LogoImage/>}/>
@@ -35,12 +46,13 @@ function App() {
                       <Route path="/Rooms"  element={<Rooms/>}/>
                       <Route path="/AboutUs"  element={<AboutUs/>}/>
                       <Route path="/ContactUs" element={<ContactUs/>}/>
-                      <Route path="/SignUp" element={<SignUp/>}/>
-                      <Route path="/SignIn" element={<SignIn/>}/>
+                      <Route path="/SignUp" element={<SignUp signUpData={getDataFromSignUp}/>} />
+                      <Route path="/SignIn" element={<SignIn />}/>
                       
                       {/* Add more routes here for other components if needed */}
                       <Route path="/" element={<Navigate to="/Home" />} />
             </Routes>  
+            
         </div>
       </Router> 
     
