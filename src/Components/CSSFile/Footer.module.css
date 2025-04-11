@@ -35,3 +35,13 @@
     transform: rotateY(180deg);
     transition: ease-in-out 0.5s all;
 }
+.socialMediaIcons {
+    font-size: 35px;
+    border-radius: 70%;
+}
+.socialMediaIcons:hover {
+    cursor: pointer;
+    background-color: #818ded;
+    color: black;
+    transition: ease-in-out 0.5s all;
+}

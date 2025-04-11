@@ -5,6 +5,9 @@ import {BrowserRouter as Router, Route,Routes,Link,Navigate} from 'react-router-
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { TfiEmail } from "react-icons/tfi";
+import { CiFacebook } from "react-icons/ci";
+import { IoLogoInstagram } from "react-icons/io";
+import { CiLinkedin } from "react-icons/ci";
 
 
 const Footer =()=>{
@@ -59,8 +62,12 @@ return(
                         <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white text-decoration-none ${Styles.leftItem}`} to="/AboutUs">About</Link></li>
                         <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white text-decoration-none ${Styles.leftItem}`} to="/SignIn">Sign in</Link></li>
                     </ul>
+                    <div className='d-flex'>
+                    <CiFacebook className={Styles.socialMediaIcons}/>
+                    <IoLogoInstagram className={Styles.socialMediaIcons}/>
+                    <CiLinkedin className={Styles.socialMediaIcons}/>
+                    </div>
             </div>
-            <div className=''></div>
             
         </div>
     </div>
