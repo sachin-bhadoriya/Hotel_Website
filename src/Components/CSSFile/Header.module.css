@@ -1,25 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+.navbarFont {
+    font-family: "Balthazar", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+  }
+
 /* main  header of container */
 .container{
-   
     width:100%;   /*set the width of background header*/
-    background-color: black;
+    background-color: rgb(11, 11, 11);
     color:white;
     text-align:center;
-    padding-bottom : 2px;  
+    /* padding-bottom : 2px;   */
     display:flex;
     margin-bottom:10px;
- 
 }
 
 nav ul{
     list-style: none;   /*to remove bulletin points*/
     text-align:center;
     justify-content: flex-end;
+    align-items: center;
 }
 /* to display in horizontal to flex*/
 .containerLink{ 
+    transition:transform  2s ease-in-out, color 2s ease-in-out;
     display:flex;
-    margin:20px;
+    /* margin:20px; */
     text-align:right;
 }
 /* to padding in Link Name  */
@@ -36,19 +44,39 @@ span :hover{
 }
 /* to display logo in left */
 .logoimagecss{
-    margin-top:-11px;   
+    /* margin-top:-11px;    */
     justify-content: flex-start;
 
 }
 
 nav ul li{
     justify-content:flex-end;
+
+}
+.containerLink a {
+    text-decoration: none;
 }
 /* hove of link name */
-.containerLink a:hover {
-    color: #ff6347;         /* Change text color to Tomato on hover */
-    text-decoration: underline; /* Add underline on hover */
+.containerLink :hover {
+    color: #818ded;         /* Change text color to Tomato on hover */
+    /* text-decoration: underline; Add underline on hover */
     transform: scale(1.05);  /* Slightly enlarge the text on hover */
+    transition: ease-in-out 0.5s all;
   }
 
 
+  /* mobile view navbar  */
+.menuBar {
+    display: none;
+    position: absolute;
+    right: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .laptopView {
+        display: none;
+    }
+    .menuBar {
+        display: block;
+    }
+    }

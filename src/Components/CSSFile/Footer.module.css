@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+.footerFont {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
 /* footer section css */
 .backGround {
     background-color: rgb(74, 74, 74);
@@ -6,6 +14,7 @@
     justify-content: center; /* Center align the whole footer */
     align-items: center;  /* Center vertically */
     padding: 30px 0; /* Optional: Adjust footer padding */
+    
 }
 
 /* Set a container to center everything */
@@ -36,7 +45,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     border: 0;
 }
 
@@ -53,11 +62,11 @@
 /* Icon styling */
 .iconStyleAdd {
     font-size: 60px;
-    margin-top: 15px;
+    margin-top: -18px;
     transition: transform 0.3s ease-in-out;
 }
 
-.iconStyle:hover, .linkForQuick:hover,.iconStyleAdd:hover {
+.iconStyle:hover, .linkForQuick:hover, .iconStyleAdd:hover {
     cursor: pointer;
     color: #818ded;
     transform: scale(1.1); /* Smooth scaling */

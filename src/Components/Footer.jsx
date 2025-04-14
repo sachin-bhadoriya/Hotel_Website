@@ -14,7 +14,7 @@ const Footer =()=>{
 return(
     <div className={Styles.backGround}>
         {/* responsive footer */}
-        <div className='container row p-4'>
+        <div className={`container row p-4 ${Styles.footerFont}`}>
             {/* <div className='col-xxl-1 col-xl-1 col-lg-1'></div> */}
             {/* add google maps */}
             <div className={`col-xxl-7 col-xl-7 col-lg-7 col-md-12 pt-5 align-items-center text-center`} id='gMaps'>

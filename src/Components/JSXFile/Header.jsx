@@ -4,41 +4,45 @@ import {Link} from 'react-router-dom'
 import Styles from  '../CSSFile/Header.module.css';
 import Logo_Component from '../JSXFile/Logo';
 import LogoImage from '../../assets/images/logo.png';
+import { CiMenuBurger } from "react-icons/ci";
+
 
 const Header=()=>{
    
     return (
         <>           
-            <header>
-            <div className={Styles.container}>
+            <header className={`navbarFont  ${Styles.container}`}>
+            <div className={` `}>
                 {/* This is a Header */}
                
                 <nav>
-                    <ul className={Styles.containerLink}>
+                    <ul className={` ${Styles.navbarFont} ${Styles.containerLink}`}>
                     
                     {/* //pass logoImage through  props*/}
                         <span className={Styles.logoimagecss}><Logo_Component Image = {LogoImage} /></span>  
                         
                         <li>
-                            <Link to="/Home"><span className={Styles.home_css}>Home</span></Link>
+                            <Link to="/Home"><span className={`${Styles.laptopView} ${Styles.home_css}`}>Home</span></Link>
                         </li><li>
-                            <Link to="/Blog"><span className={Styles.blog_css}>Blog</span></Link>
+                            <Link to="/Blog"><span className={`${Styles.laptopView} ${Styles.blog_css}`}>Blog</span></Link>
                         </li><li>
-                            <Link to="/Pages"><span className={Styles.pages_css}>Pages</span></Link>
+                            <Link to="/Pages"><span className={`${Styles.laptopView} ${Styles.pages_css}`}>Pages</span></Link>
                         </li><li>
-                            <Link to="/Rooms"><span className={Styles.rooms_css}>Rooms</span></Link>
+                            <Link to="/Rooms"><span className={`${Styles.laptopView} ${Styles.rooms_css}`}>Rooms</span></Link>
                         </li><li>
-                            <Link to ="/AboutUs"><span className={Styles.aboutus_css}>About Us</span></Link>
+                            <Link to ="/AboutUs"><span className={`${Styles.laptopView} ${Styles.aboutus_css}`}>About Us</span></Link>
                         </li><li>
-                            <Link to="/ContactUs"><span className={Styles.contactus_css}>Contact Us</span></Link>
+                            <Link to="/ContactUs"><span className={`${Styles.laptopView} ${Styles.contactus_css}`}>Contact Us</span></Link>
                         </li><li>
-                            <Link to="/SignUp"><span className={Styles.SignUp_css}>Sign Up</span></Link>
+                            <Link to="/SignUp"><span className={`${Styles.laptopView} ${Styles.SignUp_css}`}>Sign Up</span></Link>
                         </li><li>
-                            <Link to="/SignIn" className={Styles.SignIn_css}><span>Sign In</span></Link>
+                            <Link to="/SignIn" className={`${Styles.laptopView} ${Styles.SignIn_css}`}><span>Sign In</span></Link>
                         </li>
-                    
+                    <li><span><CiMenuBurger  className={`${Styles.mobileView} ${Styles.menuBar}`}/></span></li>
                         {/* You can add more links here for other routes if needed */}
                     </ul>
+                    
+
                 </nav>
                
             </div>
