@@ -7,6 +7,10 @@ import OutsideHotelImages4 from "../../assets/Images/Outside_of_hotels/outside8.
 import OutsideHotelImages6 from "../../assets/Images/Outside_of_hotels/outside7.jpg";
 import Carousel1 from '../BodyFile/Carousel_component';
 import Styles from '../CSSFile/Home.module.css';
+import Introduction from '../Introduction';
+import FAQ from './FAQ';
+import Service from './Service';
+import Consultation from '../JSXFile/Consultation';
 
 // dynamically fetch images
 
@@ -19,6 +23,10 @@ const Home = ()=>{
             <Carousel1 Hotel_images ={Images}/>
             </div>
         </div>
+        <Introduction/>
+        {/* <FAQ /> */}
+        <Service />
+        <Consultation />
         </>
     )
 

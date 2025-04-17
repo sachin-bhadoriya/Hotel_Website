@@ -1,0 +1,45 @@
+.faqContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faqItem {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .faqHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faqHeader h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .toggleIcon {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .faqContent {
+    margin-top: 10px;
+    padding-left: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

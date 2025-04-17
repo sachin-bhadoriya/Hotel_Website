@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+.serviceHeading {
+    text-align: center;
+}
+.cardBody .cards {
+    width: auto;
+    height: auto;
+    background-color: rgb(203, 203, 203);
+    justify-content: space-between;
+}
+.serviceHeading h2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4.1rem;
+}
+.serviceHeading h5, .serviceHeading p {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+.cards h5,  .cards p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+.cards h2 {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  @media screen and (max-width: 993px) {
+
+    .serviceHeading h2 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 2.4rem;
+    }
+
+    
+}
