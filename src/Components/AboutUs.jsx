@@ -1,6 +1,6 @@
 import React from 'react';
 import  { IntroductionDataDetails } from "../Components/Introduction";
-
+import Styles from "./CSSFile/About.module.css";
 
 const AboutUs = () =>{
     return (

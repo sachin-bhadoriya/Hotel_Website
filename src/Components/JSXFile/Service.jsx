@@ -7,19 +7,19 @@ import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-ro
 
 export const ServiceDataContent = {
   longText : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsum ullam perferendis hic assumenda perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolor quisquam harum ipsa hic consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laborum labore odit debitis. Officia, voluptas!",
-  ImageServiceOne : "https://picsum.photos/id/239/600/300",
+  ImageServiceOne : "https://picsum.photos/id/239/400/400",
   headingServiceOne : "OneHeader",
   AnotherHeadingServiceOne : "Another Header",
   ParaServiceOne : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci.",
-  ImageServiceTwo : "https://picsum.photos/id/234/600/300",
+  ImageServiceTwo : "https://picsum.photos/id/234/400/400",
   headingServiceTwo : "TwoHeader",
   AnotherHeadingServiceTwo : "Another Header",
   ParaServiceTwo : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci.",
-  ImageServiceThree : "https://picsum.photos/id/249/600/300",
+  ImageServiceThree : "https://picsum.photos/id/249/400/400",
   headingServiceThree : "ThreeHeader",
   AnotherHeadingServiceThree : "Another Header",
   ParaServiceThree : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci.",
-  ImageServiceFour : "https://picsum.photos/id/269/600/300",
+  ImageServiceFour : "https://picsum.photos/id/269/400/400",
   headingServiceFour : "FourHeader",
   AnotherHeadingServiceFour : "Another Header",
   ParaServiceFour : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci.",
@@ -64,7 +64,7 @@ const Service = () => {
         <h5>WHAT WE DO</h5>
         <h2>Service We Provide</h2>
 
-        <ReadMoreText text={ServiceDataContent.longText} className="serviceText w-50 m-auto" />
+        <ReadMoreText text={ServiceDataContent.longText} className="serviceText p-3 m-auto" />
       </div>
 
       <div className="container-fluid my-5">
@@ -79,7 +79,7 @@ const Service = () => {
               <Link>Click Here</Link>
               <img
                 src={ServiceDataContent.ImageServiceOne}
-                className="img-fluid mt-3 p-2 w-100"
+                className="img-fluid mt-3 p-2"  width={400} height={400}
                 alt="service"
               />
             </div>
@@ -94,7 +94,7 @@ const Service = () => {
               <Link>Click Here</Link>
               <img
                 src={ServiceDataContent.ImageServiceTwo}
-                className="img-fluid mt-3 p-2 w-100"
+                className="img-fluid mt-3 p-2"  width={400} height={400}
                 alt="service"
               />
             </div>
@@ -109,7 +109,7 @@ const Service = () => {
               <Link>Click Here</Link>
               <img
                 src={ServiceDataContent.ImageServiceThree}
-                className="img-fluid mt-3 p-2 w-100"
+                className="img-fluid mt-3 p-2"  width={400} height={400}
                 alt="service"
               />
             </div>
@@ -124,7 +124,7 @@ const Service = () => {
               <Link>Click Here</Link>
               <img
                 src={ServiceDataContent.ImageServiceFour}
-                className="img-fluid mt-3 p-2 w-100"
+                className="img-fluid mt-3 p-2"  width={400} height={400}
                 alt="service"
               />
             </div>
