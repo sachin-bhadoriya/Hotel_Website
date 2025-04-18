@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 /* add margin and padding to app.jsx file */
 body {
     margin: 0;

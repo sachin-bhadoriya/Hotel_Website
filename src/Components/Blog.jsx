@@ -1,11 +1,13 @@
 import React from 'react';
+import {ServiceDataContent} from "./JSXFile/Service";
+
+
+
 
 const Blog=()=>{
     return(
         <>
-        <div>
-            <p>Blog page</p>
-        </div>
+            <h1 className='text-center my-5 p-5'>service data reflect through props </h1>
         </>
     )
 };
