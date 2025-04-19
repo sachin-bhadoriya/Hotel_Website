@@ -1,18 +1,13 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 
-.AboutImage1 {
+.innerServiceImage1 {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
-.aboutUsContainer {
+.innerServiceContainer {
     position: relative;
 }
-.mainAboutHeadingBox{
+.maininnerServiceHeadingBox{
     position: absolute;
     background-color: black;
     width: 50%;
@@ -22,11 +17,12 @@
     bottom: 0;
     transform: translate(-50%, 50%);
 }
-.otherHeadingAboutUs {
+.otherHeadinginnerService {
     margin-top: 100px;
 }
-.missionVissionContainer img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+.offerBoxes .offerBox {
+    width: auto;
+    height: 250px;
+    /* background-color: skyblue; */
+    justify-content: space-between;
 }
