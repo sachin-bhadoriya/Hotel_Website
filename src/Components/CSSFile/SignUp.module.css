@@ -1,11 +1,11 @@
 .signup_container{
+    
     height: 100vh;
     width:400px;
     background-color: grey;
     text-align : center; 
     padding-left:40px;
     margin-left:30%;
-    border-radius:10px;
 }
 .name_container{
     padding:center;
@@ -13,36 +13,85 @@
    justify-content: center;
 
 }
+
+.HeaderClosebutton{
+    display: flex;
+   justify-content: space-between; /* space between header and button */
+   align-items: center; /* vertically center */
+   padding: 10px 0; /* optional padding */
+  
+   width:400px;
+   height:50px;
+    
+} 
+
+/* signUpHeader*/
+.signUpHeader{
+    padding: 5px;
+    font-size: 24px; /* Optional: Increase font size for better visibility */
+    display:flex;
+    margin-left:30%;
+    color: rgb(80, 80, 198);
+margin-top:-5px;
+    
+    
+}
+
+/*close Button*/
+.signUpCloseButton{
+    padding: 10px; /* Increased padding for better click area */
+    border-radius: 10px;
+    cursor: pointer; /* Change cursor to pointer */   
+    margin-left : 150px;
+    margin-top:-20px;
+    background-color : yellow;
+
+}
+.signUpCloseButton:hover{
+    background-color:red;
+    transition:0.5s;
+}
+/* Sign Up Input */
 .input_container{
-    height:30px;
-    width:300px; 
+    
+    height:25px;
+    width:300px;
+    
     margin-top:10px;
-    border-radius:5px;
-    justify-content: center;
+    
+    justify-content: left;
    
 }
 .label_container{
     display:flex;
     height:25px;
     width:200px;
-    padding-top:20px;
+    padding-top:10px;
     margin-top:10px;
     margin-left:40px;
     justify-content:left;
 
 }
-
 .button_css{
-    background-color : rgb(205, 107, 107);   /* color button*/
-    margin-top:20px; 
-    margin-left:200px;
-    height:30px;
-    width:100px;
-    border-radius: 10px; 
-    font-size: large;   
+    margin-top:10px;
+    height:40px;
+    width:140px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: bold;
+
+}
+.button_css:hover{
+    transform: 0.9s;
+    background-color: green;
 }
 
-.button_css:hover{
-    background-color : green;
-    font-size:large;
+/* label for validate password */
+.password_Error, .match_Error{
+    display:flex;
+    font-size:14px;
+    color : red;
+    justify-content: center;
+    
+
 }

@@ -1,7 +1,14 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import Styles from '../CSSFile/SignUp.module.css';
+import { UserContext } from '../BodyFile/ClassContext';
 
 const SignUp =({signUpData})=>{
+const {registrations,addRegistrations} = useContext(UserContext);
+const [passwordError,setPasswordError] = useState('');
+const [matchError,setMatchError] = useState('');
+const [password, setPassword] = useState('');
+const [isValid, setIsValid] = useState(false);
+
     const [FormData,setFormData] = useState({
         username:"",
         email:"",
@@ -10,21 +17,47 @@ const SignUp =({signUpData})=>{
         confirmpass:""
     });
 
+    const validatePassword = (pwd)=>{
+        const regex = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*\W).{8,32}$/;
+        return regex.test(pwd);
+
+    };
+
     const handleInputChange =(event)=>{
         const{name, value}=event.target;
         setFormData({
             ...FormData,
             [name]:value
-        })
-    
+        });
+        //validate password and confirm password
+        if(name ==='password'){
+            if(!validatePassword(value)){
+                setPasswordError('Password must be 8-32 characters long, include uppercase,lowercase, number and special character.')
+            }else{
+                setPasswordError('');
+            }
+        }
+        if(name ==='confirmpass'){
+            if(value !== FormData.password){
+                setMatchError('Password do not match');
+            }else{
+                console.log(`${FormData.password}`);
+                setMatchError('');
+            }
+        }
     };
+
     const getUserDetails = (event)=>{
         event.preventDefault();
-        console.log(`username ${FormData.username}`)
-        console.log(`email ${FormData.email}`);
+       //check if there are any errors before proceeding
+       if(passwordError || matchError){
+        return; //  prevent form submission if there are error
+       }
+       //call the signUpData and addRegistration function
         signUpData(FormData);
-       
+        addRegistrations(FormData);
     }
+       
     return (
         <>
             
@@ -32,7 +65,7 @@ const SignUp =({signUpData})=>{
             <form  id="SignUpForm"className={Styles.signup_form} onSubmit={getUserDetails}>
             <div className={Styles.name_container}>
                 <label className={Styles.label_container} htmlFor="fullname" required >FULL NAME: </label>
-                <input className={Styles.input_container} type="text" name="username" onChange={handleInputChange}/>
+                <input className={Styles.input_container} type="text" name="username" onChange={handleInputChange} required/>
             </div>
             <div>
                 <label className={Styles.label_container}htmlFor="contactnumber"> CONTACT NUMBER:</label>
@@ -45,10 +78,12 @@ const SignUp =({signUpData})=>{
             <div>
                 <label className={Styles.label_container} htmlFor="pass">PASSWORD</label>
                 <input className={Styles.input_container} id = "pass"type="password" name="password" onChange={handleInputChange} required/>
+                <label className={Styles.password_Error} htmlFor="pass">{passwordError}</label>
             </div>
             <div>
                 <label className={Styles.label_container} htmlFor="confirmpass">CONFIRM PASSWORD : </label>
                 <input className={Styles.input_container} id="confirmpass" type="password" name="confirmpass" onChange={handleInputChange} required/>
+                <label className={Styles.match_Error} htmlFor="pass">{matchError}</label>
             </div>
             <div>
                 <button 

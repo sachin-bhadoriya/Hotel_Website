@@ -1,0 +1,50 @@
+.SignIn_container {
+    background-color:lightgrey;      
+   padding:10px;
+   width:500px;
+   border-radius:5px;
+   margin-left:20%;
+   margin-top:15%;
+   height:300px;    /*height of the background*/
+}
+/*  header of signIN */
+.SignInHeader{
+justify-content : center;
+padding-left:40%;
+color:blue;
+}
+.SignUpLink{
+    justify-content:center;
+    margin-top:-25px;
+    margin-left:7em;
+}
+.usernameContainer,
+.passContainer {
+    margin: 30px 20px 30px 100px; /* Space between input fields */
+
+}
+
+.signIn_dataInput{
+    display : flex;
+    width:250px;
+    height:24px;
+    font-size:medium;
+    margin:10px;
+    justify-content: center;
+
+}
+.signInLabel{
+    font-size:17px;
+    margin:10px;
+}
+.signin_Button{
+    width:80px;
+    height:30px;
+    margin-left : 290px;
+    border-radius:5px;
+    
+}
+.signin_Button:hover{
+background-color:green;
+transition: 0.5s;
+}
