@@ -1,4 +1,4 @@
-import Styles from "./CSSFile/Introduction.module.css";
+import Styles from "../CSSFile/Introduction.module.css";
 
 export const IntroductionDataDetails = {
   // imageIntro: "https://i.pinimg.com/736x/e4/b1/2c/e4b12c77d71ac4d35b937b9b6cc1f028.jpg",
