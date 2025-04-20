@@ -7,6 +7,7 @@ import OutsideHotelImages4 from "../../assets/Images/Outside_of_hotels/outside8.
 import OutsideHotelImages6 from "../../assets/Images/Outside_of_hotels/outside7.jpg";
 import Carousel1 from '../BodyFile/Carousel_component';
 import Styles from '../CSSFile/Home.module.css';
+import Footer from './Footer';
 
 // dynamically fetch images
 
@@ -18,6 +19,7 @@ const Home = ()=>{
             <div className ={Styles.Carouselcss}>
             <Carousel1 Hotel_images ={Images}/>
             </div>
+            <Footer/>
         </div>
         </>
     )
