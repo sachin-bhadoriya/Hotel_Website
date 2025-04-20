@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+.footerFont {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* footer section css */
+.backGround {
+    background-color: rgb(74, 74, 74);
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Center align the whole footer */
+    align-items: center;  /* Center vertically */
+    padding: 30px 0; /* Optional: Adjust footer padding */
+    
+}
+
+/* Set a container to center everything */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align the items to the top */
+    width: 100%;
+}
+
+/* Heading css of quick link and address bar */
+.Headings {
+    color: #818ded;
+}
+
+/* google map container */
+.location {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    max-height: 350px;  /* Adjusted height */
+    overflow: hidden;
+    margin: 0 auto; /* Centering iframe */
+}
+
+.location iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    border: 0;
+}
+
+/* Left item for text sections */
+.leftItem {
+    margin-left: 10px;
+}
+
+/* Icon styling */
+.iconStyle {
+    font-size: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+/* Icon styling */
+.iconStyleAdd {
+    font-size: 60px;
+    margin-top: -18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.iconStyle:hover, .linkForQuick:hover, .iconStyleAdd:hover {
+    cursor: pointer;
+    color: #818ded;
+    transform: scale(1.1); /* Smooth scaling */
+    transition: ease-in-out 0.3s all;
+}
+
+/* Social media icons */
+.socialMediaIcons {
+    font-size: 35px;
+    border-radius: 50%;  /* Perfect circle */
+    padding: 8px;
+}
+
+.socialMediaIcons:hover {
+    cursor: pointer;
+    background-color: #818ded;
+    color: black;
+    transition: ease-in-out 0.5s all;
+}

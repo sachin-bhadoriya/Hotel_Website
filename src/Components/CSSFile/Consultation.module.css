@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+.ConsultationSection {
+    box-sizing: border-box;
+    /* background-color: rgb(181, 181, 181); */
+    width: 90%;
+    margin: auto;
+}
+
+.ConsultationSection h1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4.1rem;
+}
+.ConsultationSection h5 {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.ConsultationSection {
+    text-align: center;
+}
+/* .inputBox{
+    width: 100%;
+    border: solid 1px black;
+} */
+.inputBox input{
+    width: 95%;
+    padding: 15px;
+    outline: 0;
+    border-radius: 40px;
+    border: none;
+    text-indent: 10px;
+    background-color: rgb(150, 150, 150,0.5);
+}
+.inputBox input::placeholder{
+    text-indent: 10px;
+}
+.neededServiceLabel {  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-family: "Karla", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+.ConsultationButton {
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+    /* width: 15%; */
+    outline: none;
+    border: none;
+    background-color: grey;
+    border-radius: 50px;
+    font-family: "montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@media screen and (max-width: 993px) {
+    .ConsultationSection h1 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3rem;
+    } 
+}
