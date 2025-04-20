@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './CSSFile/Footer.module.css';
+import Styles from '../CSSFile/Footer.module.css';
 import { FaGreaterThan  } from "react-icons/fa";
 import {BrowserRouter as Router, Route,Routes,Link,Navigate} from 'react-router-dom';
 import { IoLocationSharp } from "react-icons/io5";

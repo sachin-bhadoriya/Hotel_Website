@@ -1,5 +1,5 @@
 import React from 'react';
-import  { IntroductionDataDetails } from "../Components/Introduction";
+import  { IntroductionDataDetails } from "./JSXFile/Introduction";
 import Styles from "./CSSFile/About.module.css";
 import image1 from "../assets/Images/Outside_of_hotels/outside1.jpg";
 

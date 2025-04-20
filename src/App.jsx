@@ -14,12 +14,7 @@ import ContactUs from './Components/ContactUs';
 import LogoImage from  './Components/JSXFile/Logo';
 import SignUp from    './Components/JSXFile/SignUP';
 import SignIn from './Components/JSXFile/SignIn';
-<<<<<<< HEAD
 import {MyProvider} from './Components/BodyFile/ClassContext';
-=======
-import Footer from './Components/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> new-origin/trail
 
 
 function App({contextValue}) {
@@ -36,7 +31,6 @@ const getDataFromSignUp =(data)=>{
 }
   return (
     <>
-
       <Router> 
         <div>
         
@@ -57,13 +51,7 @@ const getDataFromSignUp =(data)=>{
                       {/* Add more routes here for other components if needed */}
                       <Route path="/" element={<Navigate to="/Home" />} />
             </Routes>  
-<<<<<<< HEAD
             
-=======
-          <div>
-            <Footer />
-          </div>
->>>>>>> new-origin/trail
         </div>
       </Router>   
     </>
