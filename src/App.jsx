@@ -16,6 +16,7 @@ import SignUp from    './Components/JSXFile/SignUP';
 import SignIn from './Components/JSXFile/SignIn';
 import {MyProvider} from './Components/BodyFile/ClassContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './Components/JSXFile/Footer';
 
 function App({contextValue}) {
   const [count, setCount] = useState(0)
@@ -51,7 +52,9 @@ const getDataFromSignUp =(data)=>{
                       {/* Add more routes here for other components if needed */}
                       <Route path="/" element={<Navigate to="/Home" />} />
             </Routes>  
-            
+            <div>
+            <Footer />
+          </div>
         </div>
       </Router>   
     </>
