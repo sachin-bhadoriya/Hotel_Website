@@ -1,97 +1,166 @@
-.signup_container{
-    
-    height: 100vh;
-    width:400px;
+.signup_container {
+    /* height: 50vh; */
+    /* width:400px; */
     background-color: grey;
-    text-align : center; 
-    padding-left:40px;
-    margin-left:30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* padding:40px; */
+    /* margin-left:30%; */
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 20px 50px;
+    border-radius: 10px;
 }
-.name_container{
+
+/* .name_container {
     padding:center;
     margin-right: 20px;
-   justify-content: center;
+    justify-content: center;
+} */
 
+.HeaderClosebutton {
+    display: flex;
+    justify-content: space-between;
+    /* space between header and button */
+    align-items: center;
+    /* vertically center */
+    padding: 10px 0;
+    /* optional padding */
+    /* width:400px; */
+    height: 50px;
 }
 
-.HeaderClosebutton{
-    display: flex;
-   justify-content: space-between; /* space between header and button */
-   align-items: center; /* vertically center */
-   padding: 10px 0; /* optional padding */
-  
-   width:400px;
-   height:50px;
-    
-} 
-
 /* signUpHeader*/
-.signUpHeader{
+.signUpHeader {
     padding: 5px;
-    font-size: 24px; /* Optional: Increase font size for better visibility */
-    display:flex;
-    margin-left:30%;
+    font-size: 24px;
+    /* Optional: Increase font size for better visibility */
+    display: flex;
+    margin-left: 30%;
     color: rgb(80, 80, 198);
-margin-top:-5px;
-    
-    
+    margin-top: -5px;
 }
 
 /*close Button*/
-.signUpCloseButton{
-    padding: 10px; /* Increased padding for better click area */
+.signUpCloseButton {
+    padding: 10px;
+    /* Increased padding for better click area */
     border-radius: 10px;
-    cursor: pointer; /* Change cursor to pointer */   
-    margin-left : 150px;
-    margin-top:-20px;
-    background-color : yellow;
+    cursor: pointer;
+    /* Change cursor to pointer */
+    margin-left: 150px;
+    margin-top: -20px;
+    background-color: yellow;
+}
 
+.signUpCloseButton:hover {
+    background-color: red;
+    transition: 0.5s;
 }
-.signUpCloseButton:hover{
-    background-color:red;
-    transition:0.5s;
-}
+
 /* Sign Up Input */
-.input_container{
-    
-    height:25px;
-    width:300px;
-    
-    margin-top:10px;
-    
-    justify-content: left;
-   
+.input_container {
+    /* height:25px; */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 300px;
+    margin-top: 10px;
+    /* justify-content: left; */
 }
-.label_container{
-    display:flex;
-    height:25px;
-    width:200px;
-    padding-top:10px;
-    margin-top:10px;
-    margin-left:40px;
-    justify-content:left;
+.input_container {
+    text-indent: 5px;
+}
 
+/* signin text link css */
+.SignInLink {
+    font-family: 'karla', sans-serif;
+    justify-content: center;
+    padding: 15px 0px;
+    /* margin-top: -25px;
+    margin-left: 7em; */
 }
-.button_css{
-    margin-top:10px;
-    height:40px;
-    width:140px;
+.signininsidelink {
+    color: #fff;
+    text-decoration: none;
+}
+.signininsidelink:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+.label_container {
+    font-family: 'karla', sans-serif;
+    display: flex;
+    height: 25px;
+    /* width:200px; */
+    padding-top: 10px;
+    /* margin-top:10px; */
+    /* margin-left:40px; */
+    /* justify-content:left; */
+}
+
+.button_css {
+    /* font  styling */
+    font-family: 'quicksand', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding: 8px 25px;
+    /* height:40px;
+    width:140px; */
     border-radius: 5px;
     background-color: red;
     font-size: bold;
-
+    transition: color, all 0.5s ease-in-out;
+    color: #E0E0E0;
 }
-.button_css:hover{
-    transform: 0.9s;
+
+.button_css:hover {
+    /* transform: 0.9s; */
     background-color: green;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
 }
 
 /* label for validate password */
-.password_Error, .match_Error{
-    display:flex;
-    font-size:14px;
-    color : red;
+.password_Error,
+.match_Error {
+    display: flex;
+    font-size: 14px;
+    color: red;
     justify-content: center;
-    
+}
 
+.SignUpHeading {
+    font-family: 'DM serif Display', sans-serif;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 425px) {
+    .signup_container {
+        /* padding:40px; */
+        /* margin-left:30%; */
+        margin-bottom: 20px;
+        color: #fff;
+        padding: 10px 45px;
+    }
+    .input_container {
+        font-size: 0.7rem;
+        padding: 3px;
+        width: 220px;
+        /* justify-content: left; */
+    }
+    .button_css {
+        font-size: 1rem;
+        padding: 5px 20px;
+    }
+    .label_container {
+        font-size: 0.9rem;
+    }
+    .SignUpHeading {
+        font-size: 2rem;
+    }
 }

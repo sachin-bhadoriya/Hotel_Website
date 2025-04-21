@@ -32,7 +32,7 @@ const Consultation = () => {
                               </div>
                            </div>
                           </div>
-                          <div className={`my-2 p-2 col-12 col-sm-12 col-md-12  ${Styles.inputBox}`}>
+                          <div className={`my-2 p-2 col-12 col-sm-12 col-md-12 d-flex  ${Styles.inputBox}`}>
                             <label className='' style={{ display: "flex", alignItems: "center", gap: "8px", margin: "auto" }}>
                               <input type="checkbox" style={{width:"15px", height:"15px"}} />
                               <span>By submitting this form you agree to the terms of the Privacy Policy.</span>

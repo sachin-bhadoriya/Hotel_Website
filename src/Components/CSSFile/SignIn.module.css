@@ -1,50 +1,110 @@
+
 .SignIn_container {
-    background-color:lightgrey;      
-   padding:10px;
-   width:500px;
-   border-radius:5px;
-   margin-left:20%;
-   margin-top:15%;
-   height:300px;    /*height of the background*/
+    background-color: grey;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 20px 50px;
+    border-radius: 10px;
 }
+
 /*  header of signIN */
-.SignInHeader{
-justify-content : center;
-padding-left:40%;
-color:blue;
+.SignInHeader {
+    font-family: 'DM serif Display', sans-serif;
+    font-size: 3rem;
+    text-decoration: underline;
 }
-.SignUpLink{
-    justify-content:center;
-    margin-top:-25px;
-    margin-left:7em;
+
+.SignUpLink {
+    font-family: 'karla', sans-serif;
+    justify-content: center;
+    /* margin-top: -25px;
+    margin-left: 7em; */
 }
+.signupinsidelink {
+    color: #fff;
+    text-decoration: none;
+}
+.signupinsidelink:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
 .usernameContainer,
 .passContainer {
-    margin: 30px 20px 30px 100px; /* Space between input fields */
+    padding: 15px 0px;
+}
+
+.signIn_dataInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 300px;
+    margin-top: 10px;
 
 }
 
-.signIn_dataInput{
-    display : flex;
-    width:250px;
-    height:24px;
-    font-size:medium;
-    margin:10px;
-    justify-content: center;
+.signInLabel {
+        font-family: 'karla', sans-serif;
+        display: flex;
+        height: 25px;
+        /* width:200px; */
+        padding-top: 10px;
+        /* margin-top:10px; */
+        /* margin-left:40px; */
+        /* justify-content:left; */
+    }
 
+
+.signin_Button {
+    /* font  styling */
+    font-family: 'quicksand', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding: 8px 25px;
+    /* height:40px;
+    width:140px; */
+    border-radius: 5px;
+    background-color: green;
+    font-size: bold;
+    transition: color, all 0.5s ease-in-out;
+    color: #E0E0E0;
 }
-.signInLabel{
-    font-size:17px;
-    margin:10px;
+
+.signin_Button:hover {
+    /* transform: 0.9s; */
+    background-color: red;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
 }
-.signin_Button{
-    width:80px;
-    height:30px;
-    margin-left : 290px;
-    border-radius:5px;
-    
-}
-.signin_Button:hover{
-background-color:green;
-transition: 0.5s;
+
+
+
+@media screen and (max-width: 425px) {
+    .SignIn_container {
+        /* padding:40px; */
+        /* margin-left:30%; */
+        margin-bottom: 20px;
+        color: #fff;
+        padding: 25px 45px;
+    }
+    .signIn_dataInput {
+        font-size: 0.8rem;
+        padding: 3px;
+        width: 220px;
+        /* justify-content: left; */
+    }
+    .signin_Button {
+        font-size: 1rem;
+        padding: 5px 20px;
+    }
+    .signInLabel {
+        font-size: 0.9rem;
+    }
+    .SignInHeader {
+        font-size: 2rem;
+    }
 }

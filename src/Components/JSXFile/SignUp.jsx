@@ -1,4 +1,5 @@
 import React,{useState,useContext} from 'react';
+import {Form, Link} from 'react-router-dom';
 import Styles from '../CSSFile/SignUp.module.css';
 import { UserContext } from '../BodyFile/ClassContext';
 
@@ -60,38 +61,40 @@ const [isValid, setIsValid] = useState(false);
        
     return (
         <>
+        <h2 className={`text-center py-3 ${Styles.SignUpHeading}`}>Sign Up</h2>
+            {/* using bootstrap to center div  */}
+        <div className={`justify-content-center d-flex pb-5 ${Styles.mainSignUpContainer}`}> 
             
-        <div className={Styles.signup_container}>
-            <form  id="SignUpForm"className={Styles.signup_form} onSubmit={getUserDetails}>
-            <div className={Styles.name_container}>
-                <label className={Styles.label_container} htmlFor="fullname" required >FULL NAME: </label>
-                <input className={Styles.input_container} type="text" name="username" onChange={handleInputChange} required/>
+            <div className={Styles.signup_container}>
+                <form  id="SignUpForm"className={Styles.signup_form} onSubmit={getUserDetails}>
+                <div className={Styles.name_container}>
+                    <label className={Styles.label_container} htmlFor="fullname" required >FULL NAME: </label>
+                    <input className={Styles.input_container} type="text" name="username" id="fullname" onChange={handleInputChange} required/>
+                </div>
+                <div>
+                    <label className={Styles.label_container} htmlFor="contactnumber"> CONTACT NUMBER:</label>
+                    <input className={Styles.input_container} id="contactnumber" type="tel" minLength="10" maxLength="10" name="contactnumber" onChange={handleInputChange} required/>
+                </div>
+                <div>
+                    <label className={Styles.label_container} htmlFor="emailno">EMAIL ID:</label>
+                    <input className={Styles.input_container} id ="emailno" type="email" name="email" onChange={handleInputChange} required/>
+                </div>
+                <div>
+                    <label className={Styles.label_container} htmlFor="pass">PASSWORD</label>
+                    <input className={Styles.input_container} id = "pass"type="password" name="password" onChange={handleInputChange} required/>
+                    <label className={Styles.password_Error} htmlFor="pass">{passwordError}</label>
+                </div>
+                <div>
+                    <label className={Styles.label_container} htmlFor="confirmpass">CONFIRM PASSWORD : </label>
+                    <input className={Styles.input_container} id="confirmpass" type="password" name="confirmpass" onChange={handleInputChange} required/>
+                    <label className={Styles.match_Error} htmlFor="pass">{matchError}</label>
+                </div>
+                    <div>
+                        <p className={Styles.SignInLink}>Already have an account ?  <Link to="/SignIn" className={`${Styles.signininsidelink}`} >click here</Link> </p>
+                        <button type="submit" className={Styles.button_css} >Register</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <label className={Styles.label_container}htmlFor="contactnumber"> CONTACT NUMBER:</label>
-                <input className={Styles.input_container} id="contactnumber" type="tel" minLength="10" maxLength="10" name="contactnumber" onChange={handleInputChange} required/>
-            </div>
-            <div>
-                <label className={Styles.label_container}htmlFor="emailno">EMAIL ID:</label>
-                <input className={Styles.input_container} id ="emailno" type="email" name="email" onChange={handleInputChange} required/>
-            </div>
-            <div>
-                <label className={Styles.label_container} htmlFor="pass">PASSWORD</label>
-                <input className={Styles.input_container} id = "pass"type="password" name="password" onChange={handleInputChange} required/>
-                <label className={Styles.password_Error} htmlFor="pass">{passwordError}</label>
-            </div>
-            <div>
-                <label className={Styles.label_container} htmlFor="confirmpass">CONFIRM PASSWORD : </label>
-                <input className={Styles.input_container} id="confirmpass" type="password" name="confirmpass" onChange={handleInputChange} required/>
-                <label className={Styles.match_Error} htmlFor="pass">{matchError}</label>
-            </div>
-            <div>
-                <button 
-                type="submit"
-                className={Styles.button_css}
-                >Register</button>
-            </div>
-            </form>
         </div>
         </>
     )
