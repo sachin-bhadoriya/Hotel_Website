@@ -24,13 +24,13 @@ const AboutUs = () =>{
 
             <div className={Styles.aboutUsContainer}>
                 <img src={image1} className={Styles.AboutImage1} />
-                <div className={`text-white ${Styles.mainAboutHeadingBox}`}>ABOUT US</div>
+                <div className={`p-2 ${Styles.mainAboutHeadingBox}`}>ABOUT US</div>
             </div>
             <div className={`${Styles.otherHeadingAboutUs} px-5`}>
                 <div className="AboutHead">
                     <h4 className='text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, ex!</h4>
                 </div>
-                <div className="AboutContent">
+                <div className={`${Styles.AboutContent}`}>
                     <h6>Lorem, ipsum dolor.</h6>
                     <p>dajskjfdasdfohj{IntroductionDataDetails.mainHeading}</p>
                 </div>
@@ -41,16 +41,22 @@ const AboutUs = () =>{
                         <div className="col-sm-7">
                             <img src={image1} alt="" className='' />
                         </div>
-                        <div className="col-sm-5">
-                            <h1>OUR MISSION</h1>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quis vero vel. Minus impedit quaerat assumenda recusandae iusto. Quod molestias, est officiis saepe reprehenderit alias.
-                            </p>
-                            <h1>OUR VISSION</h1>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quis vero vel. Minus impedit quaerat assumenda recusandae iusto. Quod molestias, est officiis saepe reprehenderit alias.
-                            </p>
+                        <div className={`col-sm-5 my-4  ${Styles.infoBoxMain}`}>
+                            <div className={` ${Styles.infoBox}`}>
+                                <h1>OUR MISSION</h1>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quis vero vel. Minus impedit quaerat assumenda recusandae iusto. Quod molestias, est officiis saepe reprehenderit alias.
+                                </p>
+                            </div>
+<br />
+                            <div className={`${Styles.infoBox} ${Styles.infoBoxsecond}`}>
+                                <h1>OUR VISION</h1>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quis vero vel. Minus impedit quaerat assumenda recusandae iusto. Quod molestias, est officiis saepe reprehenderit alias.
+                                </p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>

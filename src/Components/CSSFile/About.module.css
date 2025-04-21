@@ -1,5 +1,5 @@
-/* *{
-    margin: 0;
+/* .aboutUsContainer{
+    margin: 0 !important;
     padding: 0;
     box-sizing: border-box;
 } */
@@ -13,20 +13,92 @@
     position: relative;
 }
 .mainAboutHeadingBox{
-    position: absolute;
-    background-color: black;
-    width: 50%;
-    margin: auto;
-    padding: 50px;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
+   /* font styles */
+   font-family: 'DM Serif Display',  sans-serif;
+   font-size: 3.5em;
+   color: #fff;
+   text-align: center;
+   position: absolute;
+   background-color: rgb(73, 73, 73);
+   width: 50%;
+   margin: auto;
+   /* padding: 30px; */
+   left: 50%;
+   bottom: 0;
+   transform: translate(-50%, 50%);
 }
-.otherHeadingAboutUs {
+.otherHeadingAboutUs h4{
+    /* font styles */
+    font-family: 'karla', sans-serif;
+    text-transform: uppercase;
     margin-top: 100px;
 }
+.AboutContent {
+    /* font styles */
+    font-family: 'quicksand', sans-serif;
+}
+.missionVissionContainer{
+    font-family: 'quicksand', sans-serif;
+}
+/* .otherHeadingAboutUs {
+    margin-top: 100px;
+} */
 .missionVissionContainer img {
+    border: solid 10px black;
+    margin: 10px 0 10px 0;
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
+
+.missionVissionContainer .infoBoxMain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* .infoBox {
+    margin-bottom: 40px; 
+  }
+   */
+  .infoBox h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .infoBox p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+
+
+
+
+
+
+
+  /* ===== Tablet View (smaller laptops / tablets) ===== */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .mainAboutHeadingBox{
+       font-size: 2.5rem;
+       text-align: center;
+    }
+ }
+ 
+ /* ===== Mobile View ===== */
+ @media only screen and (max-width: 767px) {
+   .mainAboutHeadingBox{
+       font-size: 2rem;
+       line-height: 1;
+       text-align: center;
+    }
+    .missionVissionContainer .infoBoxMain {
+        padding: 15px;
+    }
+    .missionVissionContainer .infoBoxsecond {
+        padding-top: 25px;
+    }
+ }
+ 

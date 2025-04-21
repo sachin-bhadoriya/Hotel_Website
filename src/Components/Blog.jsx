@@ -10,13 +10,13 @@ const Blog=()=>{
         <>
             <div className={Styles.innerServiceContainer}>
                 <img src={image1} className={Styles.innerServiceImage1} />
-                <div className={`text-white ${Styles.maininnerServiceHeadingBox}`}>SERVICE</div>
+                <div className={`p-2  ${Styles.maininnerServiceHeadingBox}`}>SERVICE</div>
             </div>
             <div className={`${Styles.otherHeadinginnerService} px-5`}>
                 <div className="innerServiceHead">
                     <h4 className='text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, ex!</h4>
                 </div>
-                <div className="innerServiceContent">
+                <div className={`${Styles.innerServiceContent}`}>
                     <h6>Lorem, ipsum dolor.</h6>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, delectus tempora facere fugiat porro itaque, sequi fuga soluta rem facilis fugit, officia amet nisi veniam molestias! Quod error aspernatur molestiae aliquid eligendi, voluptates blanditiis recusandae accusantium necessitatibus, ipsa eaque. Atque saepe sit fuga qui placeat ex provident similique incidunt dicta.</p>
                 </div>
