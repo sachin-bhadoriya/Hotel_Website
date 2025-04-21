@@ -8,7 +8,6 @@ import OutsideHotelImages6 from "../../assets/Images/Outside_of_hotels/outside7.
 import Carousel1 from '../BodyFile/Carousel_component';
 import Styles from '../CSSFile/Home.module.css';
 // <<<<<<< HEAD
-import Footer from './Footer';
 // =========
 import Introduction from './Introduction';
 import FAQ from './FAQ';
@@ -26,7 +25,6 @@ const Home = ()=>{
             <div className ={Styles.Carouselcss}>
             <Carousel1 Hotel_images ={Images}/>
             </div>
-            <Footer/>
         </div>
         <Introduction/>
         {/* <FAQ /> */}
