@@ -15,7 +15,7 @@ import LogoImage from  './Components/JSXFile/Logo';
 import SignUp from    './Components/JSXFile/SignUP';
 import SignIn from './Components/JSXFile/SignIn';
 import {MyProvider} from './Components/BodyFile/ClassContext';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App({contextValue}) {
   const [count, setCount] = useState(0)
