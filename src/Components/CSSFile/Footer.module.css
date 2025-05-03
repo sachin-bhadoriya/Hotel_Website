@@ -71,6 +71,12 @@
     transform: scale(1.1); /* Smooth scaling */
     transition: ease-in-out 0.3s all;
 }
+.leftItemQuickLink {
+    text-decoration: none;
+}
+.leftItemQuickLink:hover {
+    text-decoration: underline;
+}
 
 /* Social media icons */
 .socialMediaIcons {

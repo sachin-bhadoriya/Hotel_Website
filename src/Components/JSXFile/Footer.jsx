@@ -58,10 +58,10 @@ return(
                 <h4 className={Styles.Headings}>QUICK LINKS</h4>
                     {/* add icons before quick links */}
                     <ul className='list-unstyled'>
-                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white text-decoration-none ${Styles.leftItem}`} to="/Home">Home</Link></li>
-                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white text-decoration-none ${Styles.leftItem}`} to="/Blog">Blog</Link></li>
-                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white text-decoration-none ${Styles.leftItem}`} to="/AboutUs">About</Link></li>
-                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white text-decoration-none ${Styles.leftItem}`} to="/SignIn">Sign in</Link></li>
+                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white ${Styles.leftItem} ${Styles.leftItemQuickLink}`} to="/Home">Home</Link></li>
+                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white ${Styles.leftItem} ${Styles.leftItemQuickLink}`} to="/Blog">Blog</Link></li>
+                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white ${Styles.leftItem} ${Styles.leftItemQuickLink}`} to="/AboutUs">About</Link></li>
+                        <li><FaGreaterThan className={Styles.linkForQuick} /> <Link className={`text-white ${Styles.leftItem} ${Styles.leftItemQuickLink}`} to="/SignIn">Sign in</Link></li>
                     </ul>
                     <div className='d-flex'>
                     <CiFacebook className={Styles.socialMediaIcons}/>

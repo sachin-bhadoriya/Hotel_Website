@@ -34,7 +34,7 @@
 }
 .offerBoxes .offerBox {
     width: auto;
-    height: 250px;
+    height: auto;
     /* background-color: skyblue; */
     justify-content: space-between;
 }
