@@ -1,13 +1,14 @@
 import React from 'react';
-import  { IntroductionDataDetails } from "./JSXFile/Introduction";
 import Styles from "./CSSFile/About.module.css";
 import image1 from "../assets/Images/Outside_of_hotels/outside1.jpg";
+import useAboutData from '../hooks/useAboutData';
 
 
-const AboutUs = () =>{
+const AboutUs = () => {
+    const { data: abouttexts, loading, error } = useAboutData(); // 👈 fetch dynamic data
     return (
         <>
-            
+
             <div className={Styles.aboutUsContainer}>
                 <img src={image1} className={Styles.AboutImage1} />
                 <div className={`p-2 ${Styles.mainAboutHeadingBox}`}>ABOUT US</div>
@@ -16,10 +17,13 @@ const AboutUs = () =>{
                 <div className="AboutHead">
                     <h4 className='text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, ex!</h4>
                 </div>
-                <div className={`${Styles.AboutContent}`}>
-                    <h6>{IntroductionDataDetails.heading}</h6>
-                    <p>{IntroductionDataDetails.mainHeading}</p>
-                </div>
+
+                {abouttexts.map((abouttext) => (
+                    <div key={abouttext._id} >
+                        <h6>{abouttext.heading}</h6>
+                        <p>{abouttext.paragraph}</p>
+                    </div>
+                ))}
             </div>
             <div className={Styles.missionVissionContainer}>
                 <div className="container-fluid">
@@ -34,7 +38,7 @@ const AboutUs = () =>{
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quis vero vel. Minus impedit quaerat assumenda recusandae iusto. Quod molestias, est officiis saepe reprehenderit alias.
                                 </p>
                             </div>
-<br />
+                            <br />
                             <div className={`${Styles.infoBox} ${Styles.infoBoxsecond}`}>
                                 <h1>OUR VISION</h1>
                                 <p>

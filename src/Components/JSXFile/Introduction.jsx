@@ -1,4 +1,6 @@
 import Styles from "../CSSFile/Introduction.module.css";
+import useAboutData from "../../hooks/useAboutData";
+
 
 export const IntroductionDataDetails = {
   // imageIntro: "https://i.pinimg.com/736x/e4/b1/2c/e4b12c77d71ac4d35b937b9b6cc1f028.jpg",
@@ -8,6 +10,7 @@ export const IntroductionDataDetails = {
 };
 
 const Introduction = () => {
+  const { data: abouttexts, loading, error } = useAboutData(); // 👈 fetch dynamic data
   return (
     <>
       <div className={`${Styles.introductionSection}`}>
@@ -18,9 +21,13 @@ const Introduction = () => {
             </div>
             <div className={`col-lg-7 col-12 p-3 mb-3 mt-5 ${Styles.intro}`}>
               <h5>INTRODUCTION</h5>
-              <h1>{IntroductionDataDetails.heading}</h1>       {/* pass content through  props */}
-              <p>{IntroductionDataDetails.mainHeading}</p>    {/* pass content through  props */}
-              <p>{IntroductionDataDetails.mainHeading}</p>   {/* pass content through  props */}
+              {abouttexts.map((abouttext) => (
+                <div key={abouttext._id} >
+                    <h1>{abouttext.heading}</h1>
+                    <p>{abouttext.paragraph}</p>
+                    {/* <p>{abouttext.paragraph}</p> */}
+                  </div>
+              ))}
             </div>
           </div>
         </div>
