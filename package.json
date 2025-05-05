@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "editor.cursorStyle": "line",
     "server": "cd backend && nodemon index.js",
-    "admin": "cd admin-frontend && npm start"
+    "admin": "cd admin-frontend && npm start",
+    "install:all": "concurrently \"npm install\" \"cd admin-frontend && npm install\""
   },
   "dependencies": {
     "axios": "^1.9.0",
