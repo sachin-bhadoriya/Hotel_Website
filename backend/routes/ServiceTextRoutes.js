@@ -38,26 +38,37 @@ router.post("/addservicecontents", upload.single("image"), async (req, res) => {
 
 
 // Update ServiceText
-router.put("/updateservicecontents/:id", async (req, res) => {
-  const { id } = req.params;  // Note ID
-  const { heading,  content, MainHeading } = req.body;  // Data to update
+router.put("/updateservicecontents/:id", upload.single('image'), async (req, res) => {
+  const { id } = req.params;  // text ID
+  const { heading, content, MainHeading } = req.body;
   
+  // Prepare the update data
+  const updatedData = { heading, content, MainHeading };
+
+  // Check if an image is provided
+  if (req.file) {
+    updatedData.image = req.file.filename;  // Store the image filename if a new image is uploaded
+  }
+
   try {
     const updateServiceText = await ServiceText.findByIdAndUpdate(
-      id,  // Finding the note by ID
-      { heading,  content, MainHeading },  // New data
+      id,  // Finding the text by ID
+      updatedData,  // New data (including image)
       { new: true }  // Return updated note
     );
+
     if (!updateServiceText) {
       return res.status(404).json({ message: "Note not found" });
     }
+
     res.status(200).json(updateServiceText);  // Send back the updated note
   } catch (err) {
     res.status(500).json({ message: "Error updating the serviceText", error: err.message });
   }
 });
 
-// GET all notes (No user filter)
+
+// GET all notes 
 
 router.get('/servicecontents', async (req, res) => {
   try {
