@@ -26,20 +26,25 @@ const Blog = () => {
             <div className="container-fluid my-5">
                 <div className="row m-auto">
                     {servicetexts.map((servicetext, index) => (
-                        <div key={index} className={`col-lg-4 text-white col-sm-6 col-12 ${Styles.offerBoxes}`}>
-                            <div className={`p-3 bg-dark my-3 text-center ${Styles.offerBox}`}>
-                                <h5 className="pt-3">{servicetext.heading}</h5>
-                                <h5 className="pt-3">{servicetext.MainHeading}</h5>
-                                <p className="hdFont">{servicetext.content}</p>
-
-                                {servicetext.image && (
-                                    <img
-                                        src={`http://localhost:5000/uploads/${servicetext.image}`}
-                                        alt="Service"
-                                        style={{ maxWidth: '300px', height: 'auto' }}
-                                    />
-                                )}
-                            </div>
+                        <div key={index} className={`text-white col-sm-12 col-12 ${Styles.offerBoxes} `}>
+                                <div className={`p-2 bg-dark my-3 text-center row ${Styles.offerBox}`}>
+                                    <div className="col-md-6">
+                                        <h5 className="pt-3 my-5 fs-1">{servicetext.heading}</h5>
+                                        <h5 className="pt-3">{servicetext.MainHeading}</h5>
+                                        <p className="hdFont">{servicetext.content}</p>
+                                    </div>
+                                    <div className="col-md-6 my-3">
+                                        {servicetext.image && (
+                                            <img
+                                            src={`http://localhost:5000/uploads/${servicetext.image}`}
+                                            className="img-fluid mt-3 p-2"
+                                            width={400}
+                                            height={400}
+                                            alt="service"
+                                        />
+                                        )}
+                                    </div>
+                                </div>
                         </div>
                     ))}
                 </div>

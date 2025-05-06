@@ -1,38 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Styles from "../CSSFile/Service.module.css";
-import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
-import axios from 'axios';
+import {  Link } from 'react-router-dom';
 import useServiceData from "../../hooks/useServiceData";
 
 
-// create data through props
-
-// export const ServiceDataContent = [
-//   {
-//     image: "https://picsum.photos/id/239/400/400",
-//     heading: "sachin singh",
-//     subHeading: "Another Header",
-//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-//   },
-//   {
-//     image: "https://picsum.photos/id/234/400/400",
-//     heading: "TwoHeader",
-//     subHeading: "Another Header",
-//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-//   },
-//   {
-//     image: "https://picsum.photos/id/249/400/400",
-//     heading: "ThreeHeader",
-//     subHeading: "Another Header",
-//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-//   },
-//   {
-//     image: "https://picsum.photos/id/269/400/400",
-//     heading: "FourHeader",
-//     subHeading: "Another Header",
-//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-//   }
-// ];
 export const longText =
   "sachin singh ipsum dolor sit amet consectetur adipisicing elit. Illo ipsum ullam perferendis hic assumenda perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolor quisquam harum ipsa hic consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laborum labore odit debitis. Officia, voluptas!";
 

@@ -1,0 +1,25 @@
+.linkstext {
+    text-decoration: none;
+    color: black;
+}
+.linkstext:hover {
+    text-decoration: underline;
+    background-color: yellow;
+    color: black;
+    text-decoration-color: black;
+}
+.linkstext:hover span {
+    color: black;
+}
+.navbar {
+    margin-bottom: 30px;
+    text-align: center;
+}
+nav{
+    position: sticky;
+    top: 0;
+    left: 50%;
+}
+/* .homeimage {
+    position: fixed;
+} */
