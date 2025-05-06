@@ -17,6 +17,13 @@ const ReadServiceText = () => {
       <h5>heading is : {servicetext.heading}</h5>
       <h2>MainHeading is : {servicetext.MainHeading}</h2>
       <p>{servicetext.content}</p>
+      {servicetext.image && (
+        <img
+          src={`${process.env.REACT_APP_API_URL}/uploads/${servicetext.image}`}
+          alt="Service"
+          style={{ maxWidth: '300px', height: 'auto' }}
+        />
+      )}
     </div>
   );
 };

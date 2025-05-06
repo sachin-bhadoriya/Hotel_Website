@@ -7,32 +7,32 @@ import useServiceData from "../../hooks/useServiceData";
 
 // create data through props
 
-export const ServiceDataContent = [
-  {
-    image: "https://picsum.photos/id/239/400/400",
-    heading: "sachin singh",
-    subHeading: "Another Header",
-    paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-  },
-  {
-    image: "https://picsum.photos/id/234/400/400",
-    heading: "TwoHeader",
-    subHeading: "Another Header",
-    paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-  },
-  {
-    image: "https://picsum.photos/id/249/400/400",
-    heading: "ThreeHeader",
-    subHeading: "Another Header",
-    paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-  },
-  {
-    image: "https://picsum.photos/id/269/400/400",
-    heading: "FourHeader",
-    subHeading: "Another Header",
-    paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
-  }
-];
+// export const ServiceDataContent = [
+//   {
+//     image: "https://picsum.photos/id/239/400/400",
+//     heading: "sachin singh",
+//     subHeading: "Another Header",
+//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
+//   },
+//   {
+//     image: "https://picsum.photos/id/234/400/400",
+//     heading: "TwoHeader",
+//     subHeading: "Another Header",
+//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
+//   },
+//   {
+//     image: "https://picsum.photos/id/249/400/400",
+//     heading: "ThreeHeader",
+//     subHeading: "Another Header",
+//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
+//   },
+//   {
+//     image: "https://picsum.photos/id/269/400/400",
+//     heading: "FourHeader",
+//     subHeading: "Another Header",
+//     paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim accusamus id nesciunt quidem adipisci."
+//   }
+// ];
 export const longText =
   "sachin singh ipsum dolor sit amet consectetur adipisicing elit. Illo ipsum ullam perferendis hic assumenda perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolor quisquam harum ipsa hic consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae laborum labore odit debitis. Officia, voluptas!";
 
@@ -86,13 +86,13 @@ const Service = () => {
                   {/* <ReadMoreText text={item.paragraph} /> */}
                 </p>
                 <Link to="/blog">Click Here</Link>
-                {/* <img
-                  src={ }
+                <img
+                  src={`http://localhost:5000/uploads/${servicetext.image}`}
                   className="img-fluid mt-3 p-2"
                   width={400}
                   height={400}
                   alt="service"
-                /> */}
+                />
               </div>
             </div>
           ))}

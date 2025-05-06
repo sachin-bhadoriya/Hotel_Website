@@ -24,19 +24,25 @@ const Blog = () => {
             </div>
 
             <div className="container-fluid my-5">
-                    <div className="row m-auto">
-                        {servicetexts.map((servicetext, index) => (
-                            <div key={index} className={`col-lg-4 text-white col-sm-6 col-12 ${Styles.offerBoxes}`}>
-                                <div className={`p-3 bg-dark my-3 text-center ${Styles.offerBox}`}>
-                                    <h5 className="pt-3">{servicetext.heading}</h5>
-                                    <h5 className="pt-3">{servicetext.MainHeading}</h5>
-                                    <p className="hdFont">{servicetext.content}</p>
-                                    
-                                    {/* Add image if your API supports it */}
-                                </div>
+                <div className="row m-auto">
+                    {servicetexts.map((servicetext, index) => (
+                        <div key={index} className={`col-lg-4 text-white col-sm-6 col-12 ${Styles.offerBoxes}`}>
+                            <div className={`p-3 bg-dark my-3 text-center ${Styles.offerBox}`}>
+                                <h5 className="pt-3">{servicetext.heading}</h5>
+                                <h5 className="pt-3">{servicetext.MainHeading}</h5>
+                                <p className="hdFont">{servicetext.content}</p>
+
+                                {servicetext.image && (
+                                    <img
+                                        src={`http://localhost:5000/uploads/${servicetext.image}`}
+                                        alt="Service"
+                                        style={{ maxWidth: '300px', height: 'auto' }}
+                                    />
+                                )}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );

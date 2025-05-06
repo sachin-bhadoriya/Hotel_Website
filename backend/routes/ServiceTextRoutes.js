@@ -1,15 +1,36 @@
 const express = require("express");
-const router = express.Router();
+const multer = require("multer");
+const path = require("path");
 const ServiceText = require("../models/ServiceText");
 
+const router = express.Router();
+
+
+
+// Set up multer
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/");
+  },
+  filename: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    cb(null, Date.now() + ext);
+  }
+});
+
+const upload = multer({ storage: storage });
+
+
+
 // Create a new note
-router.post("/addservicecontents", async (req, res) => {
-  const { heading,  content, MainHeading } = req.body;
+router.post("/addservicecontents", upload.single("image"), async (req, res) => {
+  const { heading, content, MainHeading } = req.body;
+  const image = req.file ? req.file.filename : null;
 
   try {
-    const newServiceText = new ServiceText({ heading,  content, MainHeading });
+    const newServiceText = new ServiceText({ heading, content, MainHeading, image });
     await newServiceText.save();
-    res.status(201).json({ success: true, message: "Note added successfully", serviceText: newServiceText });
+    res.status(201).json({ success: true, message: "Note added", serviceText: newServiceText });
   } catch (error) {
     res.status(500).json({ success: false, message: "Failed to add note", error: error.message });
   }

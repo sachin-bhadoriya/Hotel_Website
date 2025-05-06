@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGO_URI, {
 // Service Routes
 const ServiceTextRoutes = require("./routes/ServiceTextRoutes");
 app.use("/api/servicecontents", ServiceTextRoutes);
+app.use('/uploads', express.static('uploads'));
 
 
 // About Routes
